@@ -8,15 +8,15 @@ from bs4 import BeautifulSoup
 import hashlib
 
 API_KEY = st.secrets.google.maps.api_key
-ADDRESSES = st.secrets.addresses
+ADDRESSES = st.secrets.google.maps.addresses
 COMMUTES = {
     "Home to Work": {
-        "origin": ADDRESSES["Home"],
-        "destination": ADDRESSES["Work"],
+        "origin": ADDRESSES["home"],
+        "destination": ADDRESSES["work"],
     },
     "Work to Home": {
-        "origin": ADDRESSES["Work"],
-        "destination": ADDRESSES["Home"],
+        "origin": ADDRESSES["work"],
+        "destination": ADDRESSES["home"],
     },
 }
 TRAFFIC_MODELS = ["best_guess", "pessimistic", "optimistic"]
