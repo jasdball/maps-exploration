@@ -51,8 +51,8 @@ for departure_time in departure_times.values():
     for traffic_model in TRAFFIC_MODELS:
         work_to_home_directions = directions(
             client = gmaps,
-            origin = ADDRESSES["Work"],
-            destination = ADDRESSES["Home"],
+            origin = ADDRESSES["work"],
+            destination = ADDRESSES["home"],
             mode = "driving",
             departure_time = departure_time,
             alternatives=True,
